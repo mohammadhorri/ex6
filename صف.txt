@@ -1,0 +1,52 @@
+»—‰«„Â «Ì òÂ ’› —« »—«Ì „« ÅÌ«œÂ ”«“Ì ò‰œ
+      int length;
+      int Queue;
+      int namber;
+      int i=0;
+      int out;
+      int help;
+        for(;;)
+         {
+          System.out.print("Enter length of array:");
+          Scanner lt = new Scanner(System.in);
+          length=lt.nextInt();
+          int[] intArray;
+          intArray = new int[length+1];
+           for(;;)
+            { 
+            if(length==i)
+             {
+              i=0;
+              System.out.println("More than length");
+              break;
+             }
+        System.out.print("for enter to Queue(1) or To read from Queue(2):");
+        Scanner Qe  = new Scanner(System.in);
+        Queue=Qe.nextInt();
+         if(intArray[0]==0&&Queue==2)
+          {
+           i=0;
+           System.out.println("khali mibashad");
+          }
+         if(Queue==1)
+          {
+           System.out.print("Enter namber:"); 
+           Scanner ent = new Scanner(System.in);
+           namber=ent.nextInt();
+           intArray[i]=namber;
+           i=i+1;
+          }
+         if(Queue==2)
+          {
+           System.out.print("Output Queue:");
+           out=intArray[0];
+           System.out.println(out);
+           for(int j=1;j<length;j++)
+            {
+             help=intArray[j];
+             intArray[j-1]=help;   
+            }
+          } 
+        }
+      } 
+   
